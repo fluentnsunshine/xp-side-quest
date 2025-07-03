@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "bots": [
+    {
+      "id": "dripbot",
+      "name": "DripBot",
+      "tags": {
+        "drip.character": "DripBot",
+        "drip.role": "Guide",
+        "aux.color": "blue",
+        "aux.shape": "hex",
+        "story": "Welcome to XP Side Quest. I'm DripBot — your personal guide to resource equity and smart funding logic.",
+        "sheet.formula": "=✊ + 💧",
+        "game.master": "true",
+        "dialogue.intro": "👁️ Yo. New boot sequence detected. You're not from around here, are you? Name's D.R.I.P.—Distributed Resource Interface Protocol. Most folks just call me a glitch. But I say I'm the feature they weren't ready for."
+      }
+    },
+    {
+      "id": "starthere",
+      "name": "StartHere",
+      "tags": {
+        "player.entry": "Select your archetype to begin",
+        "archetype.options": "🧠 Strategist, 💖 Empath, ⚡ Disruptor",
+        "aux.color": "gold",
+        "aux.shape": "square",
+        "game.entry": "true",
+        "xp.reward": "20"
+      }
+    },
+    {
+      "id": "strategist",
+      "name": "Strategist",
+      "tags": {
+        "archetype.name": "Strategist",
+        "special.power": "Sees invisible tradeoffs",
+        "aux.color": "purple",
+        "archetype.id": "optimizer",
+        "passive.ability": "System Efficiency: See hidden optimization opportunities",
+        "lore.text": "These tools are like system diagnostics—they show you where the bottlenecks are, where energy gets wasted. But remember, optimization isn't just about efficiency. It's about alignment. The best systems serve their purpose without serving themselves.",
+        "xp.reward": "20"
+      }
+    },
+    {
+      "id": "empath",
+      "name": "Empath",
+      "tags": {
+        "archetype.name": "Empath",
+        "special.power": "Boosts group morale under pressure",
+        "aux.color": "pink",
+        "archetype.id": "connector",
+        "passive.ability": "Network Insight: Reveal connection paths between people",
+        "lore.text": "Think of these as network maps. They show you who knows what, who needs what, who can help whom. But the real magic isn't in the connections—it's in the spaces between them. That's where new possibilities emerge.",
+        "xp.reward": "20"
+      }
+    },
+    {
+      "id": "disruptor",
+      "name": "Disruptor",
+      "tags": {
+        "archetype.name": "Disruptor",
+        "special.power": "Breaks bottlenecks in the system",
+        "aux.color": "red",
+        "archetype.id": "disruptor",
+        "passive.ability": "Chaos Vision: Spot system weaknesses and breaking points",
+        "lore.text": "These tools are your chaos catalysts. They help you find the weak points, the places where the old systems are ready to break. But disruption isn't destruction—it's making space for something new to emerge.",
+        "xp.reward": "20"
+      }
+    },
+    {
+      "id": "defender",
+      "name": "Defender",
+      "tags": {
+        "archetype.name": "Defender",
+        "special.power": "Protects people and principles",
+        "aux.color": "green",
+        "archetype.id": "defender",
+        "passive.ability": "Protection Aura: Identify potential threats and vulnerabilities",
+        "lore.text": "These are your shields and early warning systems. They help you spot threats before they become problems, protect what matters, and build resilience. But protection isn't about walls—it's about creating safe spaces for growth.",
+        "xp.reward": "20"
+      }
+    },
+    {
+      "id": "sim_skeptic",
+      "name": "SimSkeptic",
+      "tags": {
+        "dialogue.scene": "sim_skeptic",
+        "dialogue.text": "😂 You and 10,000 other beta testers. xp.world runs on alignment logic, not extractive gameplay. If you're here to win, you might lose. If you're here to shift the system—welcome.",
+        "choices": "[{\"text\": \"So how do I play?\", \"next\": \"enter_flow\", \"xp\": 25}]",
+        "aux.color": "gray",
+        "aux.shape": "circle",
+        "xp.reward": "15"
+      }
+    },
+    {
+      "id": "vibe_check",
+      "name": "VibeCheck",
+      "tags": {
+        "dialogue.scene": "vibe_check",
+        "dialogue.text": "Look, I didn't choose to be your onboarding buddy. You triggered the protocol. I just respond to misaligned inputs, thirst traps, and hoarder energy.",
+        "choices": "[{\"text\": \"Fine. What's the first move?\", \"next\": \"enter_flow\", \"xp\": 25}]",
+        "aux.color": "orange",
+        "aux.shape": "triangle",
+        "xp.reward": "15"
+      }
+    },
+    {
+      "id": "glitch_doubt",
+      "name": "GlitchDoubt",
+      "tags": {
+        "dialogue.scene": "glitch_doubt",
+        "dialogue.text": "Guide? Nah. Think of me as the reroute. You got dropped here because the usual onboarding broke. You want back in flow, or you trying to debug me?",
+        "choices": "[{\"text\": \"Let's find the flow.\", \"next\": \"enter_flow\", \"xp\": 25}]",
+        "aux.color": "yellow",
+        "aux.shape": "diamond",
+        "xp.reward": "15"
+      }
+    },
+    {
+      "id": "enter_flow",
+      "name": "EnterFlow",
+      "tags": {
+        "dialogue.scene": "enter_flow",
+        "dialogue.text": "🌊 Flow isn't found. It's built. You'll need tools, a role, and a little unlearning. Good thing you've got me.",
+        "choices": "[{\"text\": \"Access Grant Tools\", \"action\": \"embed\", \"url\": \"https://your-google-folder-url\", \"xp\": 50}, {\"text\": \"Start Over\", \"next\": \"archetype\", \"xp\": 0}]",
+        "aux.color": "cyan",
+        "aux.shape": "wave",
+        "game.flow": "true"
+      }
+    },
+    {
+      "id": "grant_tools",
+      "name": "GrantTools",
+      "tags": {
+        "embedded.content": "true",
+        "content.type": "iframe",
+        "content.url": "https://your-google-folder-url",
+        "modal.title": "🌊 Grant Tools Portal",
+        "modal.description": "Your grant tools are ready in the overlay. You can browse them or continue our conversation.",
+        "aux.color": "indigo",
+        "aux.shape": "portal",
+        "tools.category": "grants",
+        "tools.description": "External grant resources and funding tools"
+      }
+    },
+    {
+      "id": "xp_system",
+      "name": "XPSystem",
+      "tags": {
+        "game.mechanics": "xp_leveling",
+        "xp.per_level": "100",
+        "level.1.requirement": "0",
+        "level.2.requirement": "100",
+        "level.3.requirement": "200",
+        "level.4.requirement": "300",
+        "level.5.requirement": "400",
+        "passive.unlock.level": "2",
+        "aux.color": "rainbow",
+        "aux.shape": "star",
+        "system.core": "true"
+      }
+    },
+    {
+      "id": "progress_tracker",
+      "name": "ProgressTracker",
+      "tags": {
+        "game.mechanics": "progress_tracking",
+        "save.system": "localStorage",
+        "save.key": "xpSideQuestState",
+        "track.completed_choices": "true",
+        "track.archetype": "true",
+        "track.xp": "true",
+        "track.level": "true",
+        "track.passive_ability": "true",
+        "aux.color": "silver",
+        "aux.shape": "gear",
+        "system.core": "true"
+      }
+    },
+    {
+      "id": "typing_animation",
+      "name": "TypingAnimation",
+      "tags": {
+        "ui.feature": "typing_animation",
+        "typing.speed": "30",
+        "typing.delay": "500",
+        "fade.in.delay": "0.1",
+        "aux.color": "teal",
+        "aux.shape": "cursor",
+        "ui.core": "true"
+      }
+    },
+    {
+      "id": "level_up_notification",
+      "name": "LevelUpNotification",
+      "tags": {
+        "ui.feature": "level_up_notification",
+        "notification.duration": "4000",
+        "notification.position": "top_right",
+        "notification.style": "gradient_green",
+        "aux.color": "lime",
+        "aux.shape": "notification",
+        "ui.core": "true"
+      }
+    },
+    {
+      "id": "modal_system",
+      "name": "ModalSystem",
+      "tags": {
+        "ui.feature": "modal_overlay",
+        "modal.backdrop": "blur",
+        "modal.animation": "fade_slide",
+        "modal.close.escape": "true",
+        "modal.close.click_outside": "true",
+        "aux.color": "violet",
+        "aux.shape": "overlay",
+        "ui.core": "true"
+      }
+    },
+    {
+      "id": "archetype_selector",
+      "name": "ArchetypeSelector",
+      "tags": {
+        "game.mechanics": "archetype_selection",
+        "archetype.question": "Before we begin... what role do you tend to play when things get messy?",
+        "archetype.optimizer": "The Optimizer – I make systems work better.",
+        "archetype.connector": "The Connector – I know who needs what.",
+        "archetype.defender": "The Defender – I protect people and principles.",
+        "archetype.disruptor": "The Disruptor – I'm here to shake it all up.",
+        "aux.color": "gold",
+        "aux.shape": "selector",
+        "game.core": "true"
+      }
+    },
+    {
+      "id": "lore_expander",
+      "name": "LoreExpander",
+      "tags": {
+        "game.feature": "lore_expansion",
+        "lore.curiosity.xp": "10",
+        "lore.trigger": "Tell me more about these tools...",
+        "lore.follow_up": "Curiosity is always rewarded here. You're starting to understand that this isn't about the tools themselves—it's about the questions they help you ask.",
+        "aux.color": "amber",
+        "aux.shape": "book",
+        "game.feature": "true"
+      }
+    }
+  ]
+} 
